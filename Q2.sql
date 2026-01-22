@@ -37,5 +37,9 @@ CREATE TABLE order_pick (
     PRIMARY KEY (c_id, o_id)
 );
 
+INSERT INTO order_pick (c_id, o_id)
+SELECT c_id, o_id
+FROM payment;
+
 SELECT * FROM payment;
 SELECT * FROM order_pick;
